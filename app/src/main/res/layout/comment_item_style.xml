@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:paddingBottom="@dimen/_2sdp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/userImgCard"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/userImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_person_grey" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/usernameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/colorWhite"
+        android:textDirection="locale"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/userImgCard"
+        app:layout_constraintTop_toTopOf="@id/userImgCard" />
+
+    <ImageView
+        android:id="@+id/verifiedImage"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/account_verification"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/usernameTv"
+        app:layout_constraintStart_toEndOf="@id/usernameTv"
+        app:layout_constraintTop_toTopOf="@id/usernameTv" />
+
+    <TextView
+        android:id="@+id/commentTextTv"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:textColor="@color/colorWhite"
+        android:textDirection="locale"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintStart_toStartOf="@id/usernameTv"
+        app:layout_constraintTop_toBottomOf="@id/usernameTv" />
+
+
+    <TextView
+        android:id="@+id/commentDateTimeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:textColor="@color/dateReplyColor"
+        android:textDirection="locale"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toStartOf="@id/commentTextTv"
+        app:layout_constraintTop_toBottomOf="@id/commentTextTv" />
+
+    <RelativeLayout
+        android:id="@+id/replyLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintStart_toEndOf="@id/deleteTv"
+        app:layout_constraintTop_toBottomOf="@id/commentDateTimeTv">
+
+        <TextView
+            android:id="@+id/replyCountTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_2sdp"
+            android:text="@string/_0"
+            android:textColor="@color/dateReplyColor"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/replyCountTv"
+            android:padding="@dimen/_2sdp"
+            android:text="@string/reply"
+            android:textColor="@color/dateReplyColor"
+            android:textSize="@dimen/_12ssp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/deleteTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_2sdp"
+        android:text="@string/delete"
+        android:textColor="@color/colorRed"
+        android:textDirection="locale"
+        android:textSize="@dimen/_12ssp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/commentDateTimeTv"
+        app:layout_constraintTop_toTopOf="@id/replyLayout" />
+
+    <ImageButton
+        android:id="@+id/replyBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:padding="@dimen/_5sdp"
+        android:scaleX="-1"
+        android:src="@drawable/ic_reply"
+        android:tint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="@id/commentDateTimeTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/usernameTv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

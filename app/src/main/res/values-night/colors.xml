@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#1f1b34</color>
+
+    <color name="colorWhite">#000000</color>
+    <color name="colorBlack">#FFFFFF</color>
+    <color name="colorTextHint">#7B7B7B</color>
+    <color name="iconsTintColor">#1f1b34</color>
+    <color name="colorAlwaysWhite">#FFFFFF</color>
+    <color name="colorAlwaysBlack">#000000</color>
+    <color name="colorPurple">#201b34</color>
+    <color name="colorDarkAccent">#4a148c</color>
+    <color name="colorPink">#f5517b</color>
+
+    <color name="colorSearchText">#BAB6B6</color>
+    <color name="colorSearchBar">#575555</color>
+    <color name="colorGreen">#00c853</color>
+    <color name="colorRed">#E60000</color>
+    <color name="dataBarColor">#eeeeee</color>
+    <color name="darkGreyColor">#424242</color>
+    <color name="commentEditBg">#FFFFFF</color>
+    <color name="dateReplyColor">#BAB6B6</color>
+
+    <color name="primary_color">#fe9e4a</color>
+    <color name="secondary_color">#4a83fe</color>
+    <color name="colorIndicator">#5A5A5A</color>
+
+
+
+</resources>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_15sdp"
+    app:cardCornerRadius="@dimen/_15sdp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dataBarColor">
+
+        <TextView
+            android:id="@+id/poemTitleTv"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:gravity="center"
+            android:textColor="@color/colorAlwaysBlack"
+            android:textDirection="locale"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/userLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/poemTitleTv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profileCard"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="@dimen/_35sdp">
+
+                <ImageView
+                    android:id="@+id/profileImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_person_circle" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/usernameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/profileCard"
+                android:layout_alignBottom="@id/profileCard"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toEndOf="@id/profileCard"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/colorAlwaysBlack"
+                android:textDirection="locale"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/poemTextTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:ellipsize="end"
+            android:maxLines="6"
+            android:textColor="@color/colorAlwaysBlack"
+            android:textDirection="locale"
+            android:textSize="@dimen/_12ssp" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/poemTextTv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:weightSum="1.5">
+
+            <RelativeLayout
+                android:id="@+id/seenLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/seenImg"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_alignTop="@id/seenTv"
+                    android:layout_alignBottom="@id/seenTv"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_views"
+                    app:tint="@color/darkGreyColor" />
+
+                <TextView
+                    android:id="@+id/seenTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_toEndOf="@id/seenImg"
+                    android:textColor="@color/darkGreyColor"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/likeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_toEndOf="@id/seenLayout"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/likeImg"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_alignTop="@id/likeTv"
+                    android:layout_alignBottom="@id/likeTv"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_like"
+                    app:tint="@color/darkGreyColor" />
+
+                <TextView
+                    android:id="@+id/likeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_toEndOf="@id/likeImg"
+                    android:textColor="@color/darkGreyColor"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_toEndOf="@id/likeLayout"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/commentImg"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_alignTop="@id/commentTv"
+                    android:layout_alignBottom="@id/commentTv"
+                    android:contentDescription="@string/app_name"
+                    android:scaleX="-1"
+                    android:src="@drawable/ic_filled_comment"
+                    app:tint="@color/darkGreyColor" />
+
+                <TextView
+                    android:id="@+id/commentTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_toEndOf="@id/commentImg"
+                    android:textColor="@color/darkGreyColor"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
+
+
+
+

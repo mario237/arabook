@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".activities.DraftStoryDetailsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/storyDataLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/barLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="locale"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/arrowBack"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_arrow_forward_ios"
+                    app:tint="@color/colorAccent" />
+
+                <TextView
+                    android:id="@+id/editStoryTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/arrowBack"
+                    android:text="@string/edit_story"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_16ssp"
+                    tools:ignore="RelativeOverlap" />
+
+                <ImageView
+                    android:id="@+id/addNewChapterIcon"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_toStartOf="@id/deleteStoryIcon"
+                    android:contentDescription="@string/app_name"
+                    android:enabled="false"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/ic_add" />
+
+                <ImageView
+                    android:id="@+id/saveStoryDataIcon"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_toStartOf="@id/addNewChapterIcon"
+                    android:contentDescription="@string/app_name"
+                    android:enabled="false"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/ic_refresh" />
+
+
+                <ImageView
+                    android:id="@+id/deleteStoryIcon"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:contentDescription="@string/app_name"
+                    android:enabled="false"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/ic_delete" />
+
+            </RelativeLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/storyCoverCard"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/barLayout">
+
+                <ImageView
+                    android:id="@+id/storyCover"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/editCoverTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toEndOf="@id/storyCoverCard"
+                android:text="@string/edit_story_cover"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/storyCoverCard"
+                app:layout_constraintStart_toStartOf="@id/storyCoverCard"
+                app:layout_constraintTop_toBottomOf="@id/storyCoverCard" />
+
+            <LinearLayout
+                android:id="@+id/storyTitleLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/editCoverTxt">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/story_name"
+                    android:textColor="@color/colorAccent"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/storyNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColor="@color/colorWhite"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/_13ssp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/storyDescLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/storyTitleLayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/story_description"
+                    android:textColor="@color/colorAccent"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/storyDescTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColor="@color/colorWhite"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/_13ssp" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/storyTypeBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:background="@drawable/background_btn"
+                android:drawableEnd="@drawable/ic_drop_down"
+                android:drawableTint="@color/colorWhite"
+                android:gravity="start|center"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="@string/story_type"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAlwaysWhite"
+                android:textDirection="locale"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintTop_toBottomOf="@id/storyDescLayout" />
+
+            <LinearLayout
+                android:id="@+id/otherTags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/lastView"
+                app:layout_constraintTop_toBottomOf="@id/storyTypeBtn">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:foregroundGravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/other_tags"
+                    android:textColor="@color/colorAccent"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/storyTypeBtn" />
+
+                <TextView
+                    android:id="@+id/tagsTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:text="@string/choose_tags"
+                    android:textColor="@color/colorWhite"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/_15ssp"
+                    app:layout_constraintBottom_toTopOf="@id/lastView"
+                    app:layout_constraintStart_toStartOf="@id/otherTags"
+                    app:layout_constraintTop_toBottomOf="@id/otherTags" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lastView"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@color/colorAccent"
+                app:layout_constraintTop_toBottomOf="@id/otherTags" />
+
+            <TextView
+                android:id="@+id/yourChaptersTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/your_chapters"
+                android:textColor="@color/colorWhite"
+                android:textDirection="locale"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lastView" />
+
+            <ProgressBar
+                android:id="@+id/reloadChapterData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lastView" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/chapterPublishedRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintTop_toBottomOf="@id/yourChaptersTxt" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+    <ProgressBar
+        android:id="@+id/reloadStoryData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+
+</RelativeLayout>

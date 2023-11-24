@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".admin.AdminActivity">
+
+    <TextView
+        android:id="@+id/helloAdminTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_admin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="@dimen/_25ssp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:textColor="@color/colorWhite"/>
+
+    <Button
+        android:id="@+id/viewAllNovelsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/helloAdminTv"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:background="@drawable/background_btn"
+        android:text="@string/view_all_novels"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_15ssp"
+        android:textColor="@color/colorAlwaysWhite"/>
+
+
+    <Button
+        android:id="@+id/addNewsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/viewAllNovelsBtn"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:background="@drawable/background_btn"
+        android:text="@string/add_new_news"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_15ssp"
+        android:textColor="@color/colorAlwaysWhite"/>
+
+    <Button
+        android:id="@+id/deleteStoryBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/addNewsBtn"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:background="@drawable/background_btn"
+        android:text="@string/delete_story"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_15ssp"
+        android:textColor="@color/colorAlwaysWhite"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

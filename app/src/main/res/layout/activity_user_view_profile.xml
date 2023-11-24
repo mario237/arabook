@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".activities.UserViewProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+
+        <RelativeLayout
+            android:id="@+id/profileMainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/coverImg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_235sdp"
+                android:alpha="0.4"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cover1" />
+
+            <RelativeLayout
+                android:id="@+id/barLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/backImg"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_arrow_forward_ios"
+                    app:tint="@color/colorAccent" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/userDataCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/barLayout">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/profileCard"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/colorWhite"
+                    app:cardCornerRadius="@dimen/_35sdp">
+
+                    <ImageView
+                        android:id="@+id/profileImg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_person_grey" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/userFullNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/profileCard"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/verifiedImage"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignTop="@id/userFullNameTv"
+                    android:layout_alignBottom="@id/userFullNameTv"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_toEndOf="@id/userFullNameTv"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/account_verification"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/userFullNameTv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/colorWhite"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/_13ssp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/followUserLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_below="@id/username"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/background_btn"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/followIcon"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_alignParentStart="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_person_add"
+                        app:tint="@color/colorAlwaysWhite" />
+
+                    <TextView
+                        android:id="@+id/followStateTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_toEndOf="@id/followIcon"
+                        android:text="@string/follow"
+                        android:textColor="@color/colorAlwaysWhite"
+                        android:textSize="@dimen/_14ssp" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/bioCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userDataCard"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@color/colorWhite"
+                android:visibility="gone"
+                app:cardCornerRadius="20dp">
+
+                <TextView
+                    android:id="@+id/bioTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/_12ssp" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:id="@+id/userNumbersLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bioCard"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:baselineAligned="false"
+                android:gravity="center_vertical"
+                android:layoutDirection="locale"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp"
+                android:weightSum="4">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/novelNum"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/bg_white"
+                        android:gravity="center"
+                        android:text="@string/_0"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/novelNum"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:text="@string/novel"
+                        android:textColor="@color/colorWhite"
+                        android:textDirection="locale"
+                        android:textSize="@dimen/_14ssp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/poemsNum"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/bg_white"
+                        android:gravity="center"
+                        android:text="@string/_0"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/poemsNum"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:text="@string/poems"
+                        android:textColor="@color/colorWhite"
+                        android:textDirection="locale"
+                        android:textSize="@dimen/_14ssp" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/followersCard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/followNum"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/bg_white"
+                        android:gravity="center"
+                        android:text="@string/_0"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/followNum"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:text="@string/followers"
+                        android:textColor="@color/colorWhite"
+                        android:textDirection="locale"
+                        android:textSize="@dimen/_14ssp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/followingCard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/followingNum"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/bg_white"
+                        android:gravity="center"
+                        android:text="@string/_0"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/followingNum"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:text="@string/following"
+                        android:textColor="@color/colorWhite"
+                        android:textDirection="locale"
+                        android:textSize="@dimen/_14ssp" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/userPostsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userNumbersLayout"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layoutDirection="locale"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/posts"
+                    android:textColor="@color/colorWhite"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/morePostsTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/more"
+                    android:textColor="@color/colorWhite"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:drawableEndCompat="@drawable/more_arrow" />
+
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/userPostsRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userPostsLayout"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/userNovelsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userPostsRecycler"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/books"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/moreNovelsTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/more"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:drawableEndCompat="@drawable/more_arrow" />
+
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/userNovelsRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userNovelsLayout"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/userPoemsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userNovelsRecycler"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/poems"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/morePoemsTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/more"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:drawableEndCompat="@drawable/more_arrow" />
+
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/userPoemsRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userPoemsLayout"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/profileLoad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/colorAccent" />
+
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    tools:context=".fragments.PublishedFragment">
+
+
+
+    <LinearLayout
+        android:id="@+id/haveNoPublishLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:src="@drawable/ic_menu_book"
+            android:contentDescription="@string/app_name"
+            app:tint="@color/iconsTintColor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/you_have_nt_written_any_story_yet"
+            android:textSize="@dimen/_18ssp"
+            android:textColor="@color/colorWhite"/>
+
+        <Button
+            android:id="@+id/writeStoryBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_btn"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/write_now"
+            android:textAllCaps="false"
+            android:includeFontPadding="false"
+            android:textColor="@color/colorAlwaysWhite"
+            android:textSize="@dimen/_16ssp"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/publishedRecycler"
+        android:visibility="gone"/>
+
+
+    <ProgressBar
+        android:id="@+id/loadPublished"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+
+</FrameLayout>

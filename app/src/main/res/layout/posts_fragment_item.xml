@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    app:cardCornerRadius="@dimen/_15sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dataBarColor">
+
+
+        <RelativeLayout
+            android:id="@+id/userLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profileCard"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:backgroundTint="@color/colorWhite"
+                app:cardCornerRadius="@dimen/_15sdp">
+
+                <ImageView
+                    android:id="@+id/profileImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_person_grey" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/usernameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/profileCard"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toEndOf="@id/profileCard"
+                android:gravity="center"
+                android:textDirection="locale"
+                android:textColor="@color/colorAlwaysBlack"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/postDateTimeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/usernameTv"
+                android:layout_alignStart="@id/usernameTv"
+                android:layout_toEndOf="@id/profileCard"
+                android:gravity="center"
+                android:textDirection="locale"
+                android:textColor="@color/colorTextHint"
+                android:textSize="@dimen/_12ssp" />
+
+            <ru.embersoft.expandabletextview.ExpandableTextView
+                android:id="@+id/postTextTv"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/postDateTimeTv"
+                android:layout_alignStart="@id/profileCard"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:textDirection="locale"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:textColor="@color/colorAlwaysBlack"
+                android:textSize="@dimen/_12ssp"
+                app:etv_animationTime="20"
+                app:etv_expandLines="4"
+                app:etv_showLine="false"
+                app:etv_textContentColor="@color/colorAlwaysBlack"
+                app:etv_textContentSize="@dimen/_14ssp"
+                app:etv_textExpand="@string/show_more"
+                app:etv_textShrink="@string/show_less"
+                app:etv_textStateColor="@color/colorTextHint" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userLayout"
+            android:layout_alignStart="@id/userLayout"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <com.varunest.sparkbutton.SparkButton
+                android:id="@+id/likePostBtn"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:soundEffectsEnabled="true"
+                app:sparkbutton_activeImage="@drawable/ic_like"
+                app:sparkbutton_animationSpeed="1.5"
+                app:sparkbutton_iconSize="@dimen/_25sdp"
+                app:sparkbutton_inActiveImage="@drawable/ic_dislike"
+                app:sparkbutton_primaryColor="@color/primary_color"
+                app:sparkbutton_secondaryColor="@color/secondary_color" />
+
+
+            <TextView
+                android:id="@+id/likePostCounterTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/likePostBtn"
+                android:layout_alignBottom="@id/likePostBtn"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_toEndOf="@id/likePostBtn"
+                android:gravity="center"
+                android:textColor="@color/colorTextHint"
+                android:textSize="@dimen/_13ssp" />
+
+            <ImageButton
+                android:id="@+id/commentPostBtn"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toEndOf="@id/likePostCounterTv"
+                android:background="@null"
+                android:padding="@dimen/_10sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_comment"
+                android:tint="@color/colorTextHint" />
+
+            <TextView
+                android:id="@+id/commentPostCounterTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/commentPostBtn"
+                android:layout_alignBottom="@id/commentPostBtn"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/commentPostBtn"
+                android:gravity="center"
+                android:textColor="@color/colorTextHint"
+                android:textSize="@dimen/_13ssp" />
+
+
+            <ImageButton
+                android:id="@+id/viewPostImg"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toEndOf="@id/commentPostCounterTv"
+                android:background="@null"
+                android:padding="@dimen/_10sdp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_views"
+                android:tint="@color/colorTextHint" />
+
+            <TextView
+                android:id="@+id/viewPostCounterTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/viewPostImg"
+                android:layout_alignBottom="@id/viewPostImg"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/viewPostImg"
+                android:gravity="center"
+                android:textColor="@color/colorTextHint"
+                android:textSize="@dimen/_13ssp" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".activities.ViewPoemActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:id="@+id/poemLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_15sdp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/closePoemImg"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_margin="@dimen/_15sdp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_arrow_forward_ios"
+                app:tint="@color/colorAccent" />
+
+            <ImageView
+                android:id="@+id/deletePoemImg"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_margin="@dimen/_15sdp"
+                android:src="@drawable/ic_delete"
+                android:contentDescription="@string/app_name"
+                android:visibility="gone"
+                android:layout_alignParentEnd="true"
+                app:tint="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/poemTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/closePoemImg"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/userLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/poemTitleTv"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/_10sdp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/profileCard"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:backgroundTint="@color/colorWhite"
+                    app:cardCornerRadius="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/profileImg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_person_grey" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/usernameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/profileCard"
+                    android:layout_alignBottom="@id/profileCard"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/profileCard"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/poemTextTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userLayout"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_35sdp"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/poemDateTimeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/poemTextTv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold" />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/poemDateTimeTv"
+                android:layout_centerHorizontal="true">
+
+                <com.varunest.sparkbutton.SparkButton
+                    android:id="@+id/likePoemBtn"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_centerVertical="true"
+                    android:soundEffectsEnabled="true"
+                    app:sparkbutton_activeImage="@drawable/ic_like"
+                    app:sparkbutton_animationSpeed="1.5"
+                    app:sparkbutton_iconSize="@dimen/_25sdp"
+                    app:sparkbutton_inActiveImage="@drawable/ic_dislike"
+                    app:sparkbutton_primaryColor="@color/primary_color"
+                    app:sparkbutton_secondaryColor="@color/secondary_color" />
+
+
+                <TextView
+                    android:id="@+id/likePoemCounterTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/likePoemBtn"
+                    android:layout_alignStart="@id/likePoemBtn"
+                    android:layout_alignEnd="@id/likePoemBtn"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_14ssp" />
+
+                <ImageButton
+                    android:id="@+id/commentPoemBtn"
+                    android:layout_width="@dimen/_45sdp"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:layout_toEndOf="@id/likePoemBtn"
+                    android:background="@null"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/_10sdp"
+                    android:scaleX="-1"
+                    android:scaleType="fitXY"
+                    android:tint="@color/colorAccent"
+                    android:src="@drawable/ic_comment" />
+
+                <TextView
+                    android:id="@+id/commentPoemCounterTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/commentPoemBtn"
+                    android:layout_alignStart="@id/commentPoemBtn"
+                    android:layout_alignEnd="@id/commentPoemBtn"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_14ssp" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+    <ProgressBar
+        android:id="@+id/loadPoem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

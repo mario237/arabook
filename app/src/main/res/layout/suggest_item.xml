@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_250sdp"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    app:cardCornerRadius="@dimen/_15sdp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dataBarColor">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/storyImgCard"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_130sdp"
+            android:layout_margin="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_10sdp">
+
+            <ProgressBar
+                android:id="@+id/loadImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/storyCoverImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop" />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/storyNameTv"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/storyImgCard"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toEndOf="@id/storyImgCard"
+            android:textColor="@color/colorAlwaysBlack"
+            android:textDirection="locale"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/storyDescTv"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/storyNameTv"
+            android:layout_alignStart="@id/storyNameTv"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:maxLines="4"
+            android:ellipsize="end"
+            android:textColor="@color/colorAlwaysBlack"
+            android:textDirection="locale"
+            android:textSize="@dimen/_12ssp" />
+
+
+        <TextView
+            android:id="@+id/storyTypeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/storyDescTv"
+            android:layout_alignStart="@id/storyDescTv"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:textColor="@color/colorAlwaysBlack"
+            android:textDirection="locale"
+            android:textSize="@dimen/_12ssp" />
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
+
+
+
+

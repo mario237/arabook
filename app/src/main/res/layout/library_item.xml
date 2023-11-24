@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/_10sdp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/storyImg"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_130sdp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/circleImageView"
+        />
+
+    <CheckBox
+        android:id="@+id/libraryItemSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        app:buttonTint="@color/colorPink"
+        android:button="@drawable/checked_style"
+        android:visibility="gone"
+        android:layout_alignEnd="@id/storyImg"
+        android:layout_alignBottom="@id/storyImg"
+        android:layout_margin="@dimen/_5sdp"/>
+
+    <TextView
+        android:id="@+id/storyNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_alignStart="@id/storyImg"
+        android:layout_alignEnd="@id/storyImg"
+        android:gravity="center"
+        android:textDirection="locale"
+        android:layout_below="@id/storyImg"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_15ssp"
+        />
+
+
+</RelativeLayout>

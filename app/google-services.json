@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "376864048813",
+    "firebase_url": "https://arabook-a4dd3.firebaseio.com",
+    "project_id": "arabook-a4dd3",
+    "storage_bucket": "arabook-a4dd3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:376864048813:android:019861b123012ced8de824",
+        "android_client_info": {
+          "package_name": "com.mariodev.novelapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "376864048813-esa6fbuslj75a5fbkl9fec0vu6m8ekoj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAIRS42JQi2_VogUO_FsKrooMhAfre-Y4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "376864048813-esa6fbuslj75a5fbkl9fec0vu6m8ekoj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

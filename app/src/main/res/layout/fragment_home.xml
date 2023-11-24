@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".fragments.HomeFragment">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@id/barLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="locale">
+
+            <ImageView
+                android:id="@+id/barImg"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:src="@drawable/arabook_img" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toEndOf="@id/barImg"
+                android:text="@string/app_name"
+                android:textColor="@color/colorWhite"
+                android:textDirection="locale"
+                android:textSize="@dimen/_13ssp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:id="@+id/searchALlNovelsIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/_15sdp"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_search"
+                app:tint="@color/iconsTintColor" />
+
+
+        </RelativeLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshHomeFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/barLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/homePageLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+
+                    <LinearLayout
+                        android:id="@+id/discoverLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:layoutDirection="locale"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_10sdp"
+                            android:text="@string/discover"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_15ssp"
+                            android:textStyle="bold" />
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="@dimen/_10sdp">
+
+
+                            <com.smarteist.autoimageslider.SliderView
+                                android:id="@+id/imageSlider"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_160sdp"
+                                app:sliderAnimationDuration="600"
+                                app:sliderAutoCycleDirection="back_and_forth"
+                                app:sliderAutoCycleEnabled="true"
+                                app:sliderIndicatorAnimationDuration="600"
+                                app:sliderIndicatorGravity="center_horizontal|bottom"
+                                app:sliderIndicatorMargin="15dp"
+                                app:sliderIndicatorOrientation="horizontal"
+                                app:sliderIndicatorPadding="3dp"
+                                app:sliderIndicatorRadius="2dp"
+                                app:sliderIndicatorSelectedColor="@color/colorAlwaysWhite"
+                                app:sliderIndicatorUnselectedColor="@color/colorIndicator"
+                                app:sliderScrollTimeInSec="1"
+                                app:sliderStartAutoCycle="true" />
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/latestNovelLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:layoutDirection="locale"
+                        app:layout_constraintTop_toBottomOf="@id/discoverLayout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_10sdp"
+                            android:text="@string/latest_novels"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_15ssp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/moreLatestTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:drawablePadding="@dimen/_10sdp"
+                            android:padding="@dimen/_10sdp"
+                            android:text="@string/more"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_13ssp"
+                            android:textStyle="bold"
+                            app:drawableEndCompat="@drawable/more_arrow"
+                            tools:ignore="RelativeOverlap" />
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/latestNovelRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/latestNovelLayout" />
+
+                    <RelativeLayout
+                        android:id="@+id/suggestionsLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:layoutDirection="locale"
+                        app:layout_constraintTop_toBottomOf="@id/latestNovelRecycler">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_10sdp"
+                            android:text="@string/suggestions"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_15ssp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/moreSuggestionsTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:drawablePadding="@dimen/_10sdp"
+                            android:padding="@dimen/_10sdp"
+                            android:text="@string/more"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_13ssp"
+                            android:textStyle="bold"
+                            app:drawableEndCompat="@drawable/more_arrow"
+                            tools:ignore="RelativeOverlap" />
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/suggestionsRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/suggestionsLayout" />
+
+                    <RelativeLayout
+                        android:id="@+id/completedLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:layoutDirection="locale"
+                        app:layout_constraintTop_toBottomOf="@id/suggestionsRecycler">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_10sdp"
+                            android:text="@string/completed"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_15ssp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/moreCompletedTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:drawablePadding="@dimen/_10sdp"
+                            android:padding="@dimen/_10sdp"
+                            android:text="@string/more"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_13ssp"
+                            android:textStyle="bold"
+                            app:drawableEndCompat="@drawable/more_arrow"
+                            tools:ignore="RelativeOverlap" />
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/completedRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/completedLayout" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/risingNovelLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:layoutDirection="locale"
+                        app:layout_constraintTop_toBottomOf="@id/completedRecycler">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_10sdp"
+                            android:text="@string/rising_novel"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_15ssp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/moreRisingTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:drawablePadding="@dimen/_10sdp"
+                            android:padding="@dimen/_10sdp"
+                            android:text="@string/more"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_13ssp"
+                            android:textStyle="bold"
+                            app:drawableEndCompat="@drawable/more_arrow"
+                            tools:ignore="RelativeOverlap" />
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/risingNovelRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/risingNovelLayout" />
+
+
+                    <TextView
+                        android:id="@+id/poemTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/poems"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_15ssp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/risingNovelRecycler" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/poemsRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@id/poemTv" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/allTypesIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/_16sdp"
+                android:src="@drawable/ic_star"
+                android:tint="@color/colorAlwaysWhite" />
+
+            <ProgressBar
+                android:id="@+id/loadHomePage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</RelativeLayout>

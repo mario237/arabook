@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/chapterImg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_170sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/chapterNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chapterImg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textColor="@color/colorWhite"
+            android:textDirection="locale"
+            android:textSize="@dimen/_17ssp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/chapterDataLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chapterNameTv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:orientation="horizontal"
+            android:weightSum="1.5">
+
+            <RelativeLayout
+                android:id="@+id/seenLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/seenImg"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_alignTop="@id/seenTv"
+                    android:layout_alignBottom="@id/seenTv"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_views"
+                    app:tint="@color/iconsTintColor" />
+
+                <TextView
+                    android:id="@+id/seenTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_toEndOf="@id/seenImg"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rateLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_toEndOf="@id/seenLayout"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/voteImg"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_alignTop="@id/voteTv"
+                    android:layout_alignBottom="@id/voteTv"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_star"
+                    app:tint="@color/iconsTintColor" />
+
+                <TextView
+                    android:id="@+id/voteTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_toEndOf="@id/voteImg"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_toEndOf="@id/rateLayout"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/commentImg"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_alignTop="@id/commentTv"
+                    android:layout_alignBottom="@id/commentTv"
+                    android:contentDescription="@string/app_name"
+                    android:scaleX="-1"
+                    android:src="@drawable/ic_comment"
+                    app:tint="@color/iconsTintColor" />
+
+                <TextView
+                    android:id="@+id/commentTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_toEndOf="@id/commentImg"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/chapterTextTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chapterDataLayout"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:scrollbars="vertical"
+            android:textColor="@color/colorWhite"
+            android:textDirection="locale"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+
+</ScrollView>

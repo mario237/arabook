@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".fragments.DraftFragment">
+
+
+    <LinearLayout
+        android:id="@+id/noDraftLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_drafts"
+            app:tint="@color/iconsTintColor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/no_drafts_yet"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_18ssp" />
+
+
+        <Button
+            android:id="@+id/writeStoryBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:background="@drawable/background_btn"
+            android:includeFontPadding="false"
+            android:text="@string/write_now"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAlwaysWhite"
+            android:textSize="@dimen/_16ssp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/draftRecyclerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/draftRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <Button
+            android:id="@+id/addDraftBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:background="@drawable/background_btn"
+            android:includeFontPadding="false"
+            android:text="@string/add_new_draft"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAlwaysWhite"
+            android:textSize="@dimen/_16ssp" />
+
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/loadDrafts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+
+</FrameLayout>

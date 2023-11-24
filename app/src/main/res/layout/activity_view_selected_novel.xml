@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:scrollbars="none"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".admin.ViewSelectedNovelActivity">
+
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <ImageView
+          android:id="@+id/deleteStoryIcon"
+          android:layout_width="@dimen/_30sdp"
+          android:layout_height="@dimen/_30sdp"
+          android:contentDescription="@string/delete_story"
+          android:src="@drawable/ic_delete"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          android:layout_margin="@dimen/_5sdp"
+          />
+
+      <androidx.cardview.widget.CardView
+          android:id="@+id/storyCoverCard"
+          android:layout_width="@dimen/_100sdp"
+          android:layout_height="@dimen/_150sdp"
+          android:layout_marginTop="@dimen/_30sdp"
+          android:layout_marginStart="@dimen/_25sdp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintEnd_toEndOf="parent">
+
+          <ImageView
+              android:id="@+id/storyCover"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:contentDescription="@string/app_name"
+              android:scaleType="centerCrop" />
+
+      </androidx.cardview.widget.CardView>
+
+
+      <TextView
+          android:id="@+id/storyNameTxt"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/_10sdp"
+          android:layout_marginTop="@dimen/_20sdp"
+          android:text="@string/story_name"
+          android:textColor="@color/colorWhite"
+          android:textSize="@dimen/_14ssp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/storyCoverCard"
+          />
+
+      <TextView
+          android:id="@+id/storyNameTv"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/_10sdp"
+          android:layout_marginTop="@dimen/_20sdp"
+          android:textColor="@color/colorWhite"
+          android:textSize="@dimen/_14ssp"
+          app:layout_constraintStart_toEndOf="@id/storyNameTxt"
+          app:layout_constraintTop_toBottomOf="@id/storyCoverCard"
+          />
+
+      <TextView
+          android:id="@+id/storyTypeTxt"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/_10sdp"
+          android:layout_marginTop="@dimen/_20sdp"
+          android:text="@string/story_type"
+          android:textColor="@color/colorWhite"
+          android:textSize="@dimen/_14ssp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/storyNameTxt"
+          />
+
+      <TextView
+          android:id="@+id/storyTypeTv"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/_10sdp"
+          android:layout_marginTop="@dimen/_20sdp"
+          android:textSize="@dimen/_14ssp"
+          android:textColor="@color/colorWhite"
+          app:layout_constraintStart_toEndOf="@id/storyTypeTxt"
+          app:layout_constraintTop_toBottomOf="@id/storyNameTxt"
+          />
+
+      <TextView
+          android:id="@+id/storyTagsTxt"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/_10sdp"
+          android:layout_marginTop="@dimen/_20sdp"
+          android:text="@string/choose_tags"
+          android:textColor="@color/colorWhite"
+          android:textSize="@dimen/_14ssp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/storyTypeTv"
+          />
+
+
+      <TextView
+          android:id="@+id/storyTagsTv"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/_10sdp"
+          android:layout_marginTop="@dimen/_20sdp"
+          android:textColor="@color/colorWhite"
+          android:textSize="@dimen/_14ssp"
+          app:layout_constraintStart_toEndOf="@id/storyTagsTxt"
+          app:layout_constraintTop_toBottomOf="@id/storyTypeTv"
+          />
+
+      <TextView
+          android:id="@+id/storyCompletedTxt"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/_10sdp"
+          android:layout_marginTop="@dimen/_20sdp"
+          android:textColor="@color/colorWhite"
+          android:text="@string/completed_or_not"
+          android:textSize="@dimen/_14ssp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/storyTagsTv"
+          />
+
+
+      <TextView
+          android:id="@+id/storyCompletedTv"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/_10sdp"
+          android:layout_marginTop="@dimen/_20sdp"
+          android:textColor="@color/colorWhite"
+          android:textSize="@dimen/_14ssp"
+          app:layout_constraintStart_toEndOf="@id/storyCompletedTxt"
+          app:layout_constraintTop_toBottomOf="@id/storyTagsTv"
+          />
+
+
+      <TextView
+          android:id="@+id/storyAdultTxt"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/_10sdp"
+          android:text="@string/for_adult_or_not"
+          android:textColor="@color/colorWhite"
+          android:textSize="@dimen/_14ssp"
+          android:layout_marginTop="@dimen/_20sdp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/storyCompletedTv"
+          />
+
+      <TextView
+          android:id="@+id/storyAdultTv"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/_10sdp"
+          android:textColor="@color/colorWhite"
+          android:textSize="@dimen/_14ssp"
+          android:layout_marginTop="@dimen/_20sdp"
+          app:layout_constraintStart_toEndOf="@id/storyAdultTxt"
+          app:layout_constraintTop_toBottomOf="@id/storyCompletedTv"
+          />
+
+
+      <ImageButton
+          android:id="@+id/addDiscoverImg"
+          android:layout_width="@dimen/_40sdp"
+          android:layout_height="@dimen/_40sdp"
+          android:src="@drawable/ic_done"
+          android:background="@drawable/background_green_circle"
+          android:layout_marginTop="@dimen/_20sdp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/storyAdultTv"
+          android:contentDescription="@string/app_name" />
+
+      <ImageButton
+          android:id="@+id/deleteDiscoverImg"
+          android:layout_width="@dimen/_40sdp"
+          android:layout_height="@dimen/_40sdp"
+          android:src="@drawable/ic_delete"
+          android:scaleType="center"
+          android:visibility="gone"
+          android:tint="@color/colorAlwaysWhite"
+          android:background="@drawable/background_red_circle"
+          android:layout_marginTop="@dimen/_20sdp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/storyAdultTv"
+          android:contentDescription="@string/app_name" />
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".activities.UserViewNewsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:id="@+id/newsDataLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/barLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="locale">
+
+                <ImageView
+                    android:id="@+id/arrowBack"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_arrow_forward_ios"
+                    app:tint="@color/colorAccent" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/arrowBack"
+                    android:layout_alignBottom="@id/arrowBack"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/arrowBack"
+                    android:text="@string/arabook_news"
+                    android:textColor="@color/colorWhite"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/deleteNewsIcon"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_delete"
+                    android:visibility="gone"
+                    app:tint="@color/colorAccent" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/barLayout">
+
+                <TextView
+                    android:id="@+id/newsTitleTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/newsImageCard"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:textColor="@color/colorWhite"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/newsImageCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200sdp"
+                    android:layout_below="@id/newsTitleTv"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    app:cardCornerRadius="@dimen/_15sdp">
+
+                    <ImageView
+                        android:id="@+id/newsImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerCrop"
+                        android:visibility="visible" />
+
+                    <ProgressBar
+                        android:id="@+id/loadImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="visible" />
+
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/newsTextTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/newsImageCard"
+                    android:layout_alignStart="@id/newsTitleTv"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:autoLink="web"
+                    android:lineSpacingExtra="4dp"
+                    android:lineSpacingMultiplier="1.2"
+                    android:linksClickable="true"
+                    android:textColor="@color/colorWhite"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/_13ssp" />
+
+                <RelativeLayout
+                    android:id="@+id/commentsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/newsTextTv"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layoutDirection="locale"
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/commentsText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:text="@string/comments"
+                        android:textColor="@color/colorWhite"
+                        android:textDirection="locale"
+                        android:textSize="@dimen/_14ssp"
+                        android:textStyle="bold"
+                        tools:ignore="RelativeOverlap" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:layout_alignTop="@id/commentsText"
+                        android:layout_alignBottom="@+id/commentsText"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_arrow_back_ios"
+                        app:tint="@color/iconsTintColor" />
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+    <ProgressBar
+        android:id="@+id/loadNewsData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

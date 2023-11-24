@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".activities.StoryTitleOrDescActivity">
+
+    <RelativeLayout
+        android:id="@+id/barLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layoutDirection="locale">
+
+        <ImageView
+            android:id="@+id/arrowBack"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_margin="@dimen/_15sdp"
+            android:layout_alignTop="@id/editStoryTxt"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_arrow_forward_ios"
+            app:tint="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/editStoryTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@id/arrowBack"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_16ssp" />
+
+
+    </RelativeLayout>
+
+
+    <EditText
+        android:id="@+id/storyEdt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:layout_marginTop="@dimen/_25sdp"
+        app:layout_constraintTop_toBottomOf="@id/barLayout"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorTextHint"
+        tools:ignore="LabelFor" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

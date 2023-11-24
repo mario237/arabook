@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/firstSecurityLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/firstSecurityTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:padding="@dimen/_15sdp"
+            android:text="@string/first_security"
+            android:textColor="@color/colorAlwaysBlack"
+            android:textDirection="locale"
+            android:textSize="@dimen/_15ssp"
+            tools:ignore="RelativeOverlap" />
+
+
+        <CheckBox
+            android:id="@+id/firstSecurityCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/firstSecurityTv"
+            android:layout_alignBottom="@id/firstSecurityTv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:button="@drawable/checked_style"
+            android:buttonTint="@color/colorAccent" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/secondSecurityLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/firstSecurityLayout">
+
+        <TextView
+            android:id="@+id/secondSecurityTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:padding="@dimen/_15sdp"
+            android:text="@string/second_security"
+            android:textColor="@color/colorAlwaysBlack"
+            android:textDirection="locale"
+            android:textSize="@dimen/_15ssp"
+            tools:ignore="RelativeOverlap" />
+
+
+        <CheckBox
+            android:id="@+id/secondSecurityCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/secondSecurityTv"
+            android:layout_alignBottom="@id/secondSecurityTv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:button="@drawable/checked_style"
+            android:buttonTint="@color/colorAccent" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/thirdSecurityLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/secondSecurityLayout">
+
+        <TextView
+            android:id="@+id/thirdSecurityTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:padding="@dimen/_15sdp"
+            android:text="@string/third_security"
+            android:textColor="@color/colorAlwaysBlack"
+            android:textDirection="locale"
+            android:textSize="@dimen/_15ssp"
+            tools:ignore="RelativeOverlap" />
+
+
+        <CheckBox
+            android:id="@+id/thirdSecurityCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/thirdSecurityTv"
+            android:layout_alignBottom="@id/thirdSecurityTv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:button="@drawable/checked_style"
+            android:buttonTint="@color/colorAccent" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

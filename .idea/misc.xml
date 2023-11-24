@@ -1,0 +1,164 @@
+<project version="4">
+  <component name="EntryPointsManager">
+    <entry_points version="2.0">
+      <entry_point TYPE="field" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity ACCESS_FILE" />
+      <entry_point TYPE="field" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity addOrEditCoverTxt" />
+      <entry_point TYPE="field" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity adult" />
+      <entry_point TYPE="method" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity$1 void afterTextChanged(android.text.Editable editable)" />
+      <entry_point TYPE="field" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity back" />
+      <entry_point TYPE="method" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity$1 void beforeTextChanged(java.lang.CharSequence charSequence, int i, int i1, int i2)" />
+      <entry_point TYPE="field" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity completed" />
+      <entry_point TYPE="field" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity displayCoverLayout" />
+      <entry_point TYPE="field" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity mImageUri" />
+      <entry_point TYPE="method" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity$6 void onClick(android.content.DialogInterface dialogInterface, int i)" />
+      <entry_point TYPE="method" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity$2 void onClick(android.view.View view)" />
+      <entry_point TYPE="method" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity$3 void onClick(android.view.View view)" />
+      <entry_point TYPE="method" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity$4 void onClick(android.view.View view)" />
+      <entry_point TYPE="method" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity$5 void onClick(android.view.View view)" />
+      <entry_point TYPE="method" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity$10$3$2 void onFailure(java.lang.Exception e)" />
+      <entry_point TYPE="method" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity$11 void onFailure(java.lang.Exception e)" />
+      <entry_point TYPE="method" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity$10 void onSuccess(com.google.firebase.storage.UploadTask.TaskSnapshot taskSnapshot)" />
+      <entry_point TYPE="method" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity$10$3 void onSuccess(android.net.Uri uri)" />
+      <entry_point TYPE="method" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity$10$3$1 void onSuccess(java.lang.Void aVoid)" />
+      <entry_point TYPE="method" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity$1 void onTextChanged(java.lang.CharSequence charSequence, int i, int i1, int i2)" />
+      <entry_point TYPE="field" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity PERMISSION_FILE" />
+      <entry_point TYPE="field" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity proceedTxt" />
+      <entry_point TYPE="field" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity proceedWatcher" />
+      <entry_point TYPE="field" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity progressBar" />
+      <entry_point TYPE="field" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity selectedType" />
+      <entry_point TYPE="field" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity selectStoryTypeBtn" />
+      <entry_point TYPE="field" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity sharedPref" />
+      <entry_point TYPE="field" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity storage" />
+      <entry_point TYPE="field" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity storageReference" />
+      <entry_point TYPE="field" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity storyCover" />
+      <entry_point TYPE="field" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity storyDescTEdt" />
+      <entry_point TYPE="field" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity storyDetailsActivityLayout" />
+      <entry_point TYPE="field" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity storyId" />
+      <entry_point TYPE="field" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity storyNameTEdt" />
+      <entry_point TYPE="field" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity storyRef" />
+      <entry_point TYPE="field" FQNAME="com.mariodev.novelapp.activities.AddNewStoryActivity url" />
+      <entry_point TYPE="field" FQNAME="com.mariodev.novelapp.activities.EditProfileActivity coreHelper" />
+      <entry_point TYPE="field" FQNAME="com.mariodev.novelapp.activities.PublishedStoryActivity coreHelper" />
+      <entry_point TYPE="field" FQNAME="com.mariodev.novelapp.models.UserModel coverNumber" />
+    </entry_points>
+    <pattern value="com.mariodev.novelapp.ExampleUnitTest" method="addition_isCorrect" />
+    <pattern value="com.mariodev.novelapp.admin.AddNewsActivity" />
+    <pattern value="com.mariodev.novelapp.activities.AddNewStoryActivity" />
+    <pattern value="com.mariodev.novelapp.admin.AdminActivity" />
+    <pattern value="com.mariodev.novelapp.activities.AllTypesActivity" />
+    <pattern value="com.mariodev.novelapp.activities.AddNewStoryActivity" method="attachBaseContext" />
+    <pattern value="com.mariodev.novelapp.activities.ChapterCommentReplyActivity" />
+    <pattern value="com.mariodev.novelapp.activities.ChapterCommentsActivity" />
+    <pattern value="com.mariodev.novelapp.adapters.ChapterPagerAdapter" />
+    <pattern value="com.mariodev.novelapp.activities.AddNewStoryActivity" method="checkLightMode" />
+    <pattern value="com.mariodev.novelapp.activities.AddNewStoryActivity" method="chooseImage" />
+    <pattern value="com.mariodev.novelapp.activities.ChoosePostOrPoemActivity" />
+    <pattern value="com.mariodev.novelapp.models.CommentModel" />
+    <pattern value="com.mariodev.novelapp.activities.CompleteGoogleDataActivity" />
+    <pattern value="com.mariodev.novelapp.activities.ContactUsActivity" />
+    <pattern value="com.mariodev.novelapp.activities.DraftStoryDetailsActivity" />
+    <pattern value="com.mariodev.novelapp.activities.EditProfileActivity" />
+    <pattern value="com.mariodev.novelapp.ExampleInstrumentedTest" />
+    <pattern value="com.mariodev.novelapp.ExampleUnitTest" />
+    <pattern value="com.mariodev.novelapp.activities.AddNewStoryActivity" method="goToWriteChapter" />
+    <pattern value="com.mariodev.novelapp.fragments.HomeFragment" />
+    <pattern value="com.mariodev.novelapp.activities.LoginActivity" />
+    <pattern value="com.mariodev.novelapp.activities.MainPageActivity" />
+    <pattern value="com.mariodev.novelapp.activities.MoreActivity" />
+    <pattern value="com.mariodev.novelapp.activities.MoreProfileActivity" />
+    <pattern value="com.mariodev.novelapp.notificationServices.MyFirebaseInstanceIdService" />
+    <pattern value="com.mariodev.novelapp.notificationServices.MyFirebaseMessagingServices" />
+    <pattern value="com.mariodev.novelapp.activities.NewsCommentsActivity" />
+    <pattern value="com.mariodev.novelapp.activities.NewsCommentsReplyActivity" />
+    <pattern value="com.mariodev.novelapp.activities.PoemCommentsActivity" />
+    <pattern value="com.mariodev.novelapp.activities.PoemCommentsReplyActivity" />
+    <pattern value="com.mariodev.novelapp.activities.PostCommentsActivity" />
+    <pattern value="com.mariodev.novelapp.activities.PostCommentsReplyActivity" />
+    <pattern value="com.mariodev.novelapp.activities.PostOrPoemActivity" />
+    <pattern value="com.mariodev.novelapp.activities.PublishedStoryActivity" />
+    <pattern value="com.mariodev.novelapp.activities.ReviewReplyActivity" />
+    <pattern value="com.mariodev.novelapp.activities.SearchAllNovelsActivity" />
+    <pattern value="com.mariodev.novelapp.activities.SettingsActivity" />
+    <pattern value="com.mariodev.novelapp.activities.SignUpActivity" />
+    <pattern value="com.mariodev.novelapp.activities.SplashActivity" />
+    <pattern value="com.mariodev.novelapp.activities.StoryTitleOrDescActivity" />
+    <pattern value="com.mariodev.novelapp.activities.UserReviewsActivity" />
+    <pattern value="com.mariodev.novelapp.activities.UserViewChapterActivity" />
+    <pattern value="com.mariodev.novelapp.activities.UserViewNewsActivity" />
+    <pattern value="com.mariodev.novelapp.activities.UserViewProfileActivity" />
+    <pattern value="com.mariodev.novelapp.activities.UserViewStoryActivity" />
+    <pattern value="com.mariodev.novelapp.admin.ViewAllNovelsActivity" />
+    <pattern value="com.mariodev.novelapp.activities.ViewFollowUsersActivity" />
+    <pattern value="com.mariodev.novelapp.activities.ViewPoemActivity" />
+    <pattern value="com.mariodev.novelapp.activities.ViewPostActivity" />
+    <pattern value="com.mariodev.novelapp.activities.ViewPublishedChapterActivity" />
+    <pattern value="com.mariodev.novelapp.admin.ViewSelectedNovelActivity" />
+    <pattern value="com.mariodev.novelapp.activities.ViewStoryTypesActivity" />
+    <pattern value="com.mariodev.novelapp.activities.WriteChapterActivity" />
+    <pattern value="com.mariodev.novelapp.adapters.LibraryAdapter" />
+    <pattern value="com.mariodev.novelapp.helpers.LocaleHelper" />
+    <pattern value="com.mariodev.novelapp.models.NewsModel" />
+    <pattern value="com.mariodev.novelapp.activities.AddNewStoryActivity" method="onActivityResult" />
+    <pattern value="com.mariodev.novelapp.activities.AddNewStoryActivity" method="onBackPressed" />
+    <pattern value="com.mariodev.novelapp.activities.AddNewStoryActivity" method="onCreate" />
+    <pattern value="com.mariodev.novelapp.activities.ViewPublishedChapterActivity" method="onCreate" />
+    <pattern value="com.mariodev.novelapp.activities.AddNewStoryActivity" method="openChooseTypeDialog" />
+    <pattern value="com.mariodev.novelapp.models.PoemModel" />
+    <pattern value="com.mariodev.novelapp.adapters.PostFragmentAdapter" />
+    <pattern value="com.mariodev.novelapp.models.PostModel" />
+    <pattern value="com.mariodev.novelapp.fragments.ProfileFragment" />
+    <pattern value="com.mariodev.novelapp.activities.WriteChapterActivity" method="publishChapter" />
+    <pattern value="com.mariodev.novelapp.models.StoryModel" />
+    <pattern value="com.mariodev.novelapp.models.StoryTypeModel" />
+    <pattern value="com.mariodev.novelapp.ExampleInstrumentedTest" method="useAppContext" />
+    <pattern value="com.mariodev.novelapp.models.UserModel" />
+    <pattern value="com.mariodev.novelapp.activities.UserViewChapterActivity" method="onItemClick" />
+    <pattern value="com.mariodev.novelapp.models.NewsModel" method="NewsModel" />
+    <pattern value="com.mariodev.novelapp.models.PostModel" method="PostModel" />
+  </component>
+  <component name="NullableNotNullManager">
+    <option name="myDefaultNullable" value="org.jetbrains.annotations.Nullable" />
+    <option name="myDefaultNotNull" value="androidx.annotation.NonNull" />
+    <option name="myNullables">
+      <value>
+        <list size="12">
+          <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.Nullable" />
+          <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nullable" />
+          <item index="2" class="java.lang.String" itemvalue="javax.annotation.CheckForNull" />
+          <item index="3" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.Nullable" />
+          <item index="4" class="java.lang.String" itemvalue="android.support.annotation.Nullable" />
+          <item index="5" class="java.lang.String" itemvalue="androidx.annotation.Nullable" />
+          <item index="6" class="java.lang.String" itemvalue="android.annotation.Nullable" />
+          <item index="7" class="java.lang.String" itemvalue="androidx.annotation.RecentlyNullable" />
+          <item index="8" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.qual.Nullable" />
+          <item index="9" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NullableDecl" />
+          <item index="10" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NullableType" />
+          <item index="11" class="java.lang.String" itemvalue="com.android.annotations.Nullable" />
+        </list>
+      </value>
+    </option>
+    <option name="myNotNulls">
+      <value>
+        <list size="11">
+          <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.NotNull" />
+          <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nonnull" />
+          <item index="2" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.NonNull" />
+          <item index="3" class="java.lang.String" itemvalue="android.support.annotation.NonNull" />
+          <item index="4" class="java.lang.String" itemvalue="androidx.annotation.NonNull" />
+          <item index="5" class="java.lang.String" itemvalue="android.annotation.NonNull" />
+          <item index="6" class="java.lang.String" itemvalue="androidx.annotation.RecentlyNonNull" />
+          <item index="7" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.qual.NonNull" />
+          <item index="8" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NonNullDecl" />
+          <item index="9" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NonNullType" />
+          <item index="10" class="java.lang.String" itemvalue="com.android.annotations.NonNull" />
+        </list>
+      </value>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
